@@ -8,7 +8,7 @@
         "imgUrl": "/images/Ribeaupierre-Syrah.png",
         "price": "19.80",
         "type": "Red",
-        "market rating": "8",
+        "market rating": "3",
         "_createdOn": 1617194128618
     },
     {
@@ -26,13 +26,13 @@
     {
         "id": "3",
         "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-        "name": "Montepulcano d'Abruzzo",
+        "name": "Montepulcano d'Abr..",
         "netQty": "0.75 l",
         "origin": "Italy",
         "imgUrl": "/images/Montepulcano.png",
         "price": "8.75",
         "type": "Red",
-        "market rating": "9",
+        "market rating": "4",
         "_createdOn": 1617194295480
     },
     {
