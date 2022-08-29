@@ -3,14 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cubicle</title>
+    <title>Wine</title>
     <link href="/static/css/site.css" type="text/css" rel="stylesheet">
     <link rel='shortcut icon' type='image/x-icon' href='static/images/favicon.png' />
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <ul>
+                <li><img class="logo" src="static/images/logo.png"></li>
+                <li><a href="/">Browse</a></li>
+                <li><a href="/create">Add Wine</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </header>
 
-    {{{body}}}
+        {{{body}}}
+
+    </div>
+
 
     <footer>@Wines: Exercise for Express.js and Handlebars</footer>
 </body>

@@ -1,8 +1,13 @@
-const express = require('express')
+const express = require("express");
 
-const homeController = require('./controllers/homeControllers')
+const homeController = require("./controllers/homeControllers");
+const aboutController = require("./controllers/aboutConroller");
+const wineController = require("./controllers/wineController")
 
-const router = express.Router()
-router.use("/", homeController)
+const router = express.Router();
+router.get("/", homeController);
+router.get("/about", aboutController);
+router.get("/create", wineController)
 
-module.exports = router
+
+module.exports = router;
