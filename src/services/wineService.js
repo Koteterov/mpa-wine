@@ -1,5 +1,15 @@
-const fs = require("fs/promises")
+const fs = require("fs/promises");
+const path = require("path");
 
-const wines = require("../wines.json")
+const wines = require("../wines.json");
 
-module.exports = wines
+exports.save = (wine) => {
+  wines.push({ id: Number(wines[wines.length - 1].id) + 1, ...wine });
+
+  let data = JSON.stringify(wines, null, 4);
+
+  return fs.writeFile(path.resolve('src', 'wines.json'), data, { encoding: 'utf-8' });
+};
+
+
+

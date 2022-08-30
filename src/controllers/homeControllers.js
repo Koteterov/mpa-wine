@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const wines = require("../services/wineService")
+const wines = require("../wines.json");
 
 router.get("/", (req, res) => {
   res.render("index", {wines});

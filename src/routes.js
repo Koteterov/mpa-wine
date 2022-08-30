@@ -7,7 +7,7 @@ const wineController = require("./controllers/wineController")
 const router = express.Router();
 router.get("/", homeController);
 router.get("/about", aboutController);
-router.get("/create", wineController)
+router.use("/wine", wineController)
 
 
 module.exports = router;

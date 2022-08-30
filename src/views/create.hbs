@@ -1,23 +1,23 @@
-    <main>
-      <h1>Create</h1>
-      <div class="form">
-        <form action='' method="">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name">
-          <label for="name">Description</label>
-          <textarea id="name" name="description"></textarea>
-          <label for="image">ImageUrl</label>
-          <input type="text" id="image" name="imageUrl">
-          <label for="difficulty">Difficulty</label>
-          <select id="difficulty" name="difficultyLevel">
-            <option value="1">1 - Very Easy</option>
-            <option value="2">2 - Easy</option>
-            <option value="3">3 - Medium (Standard 3x3)</option>
-            <option value="4">4 - Intermediate</option>
-            <option value="5">5 - Expert</option>
-            <option value="6">6 - Hardcore</option>
-          </select>
-          <input type="submit" value="Create">
+<main>
+    <h1>Create</h1>
+    <div class="form">
+        <form action="/wine/create" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            <label for="type">Type</label>
+            <textarea id="type" name="type"></textarea>
+            <label for="image">ImageUrl</label>
+            <input type="text" id="image" name="imageUrl">
+            <label for="rating">Market Rating</label>
+            <select id="rating" name="market rating">
+                <option value="1">1 - Very Low</option>
+                <option value="2">2 - Low</option>
+                <option value="3">3 - Medium</option>
+                <option value="4">4 - Intermediate</option>
+                <option value="5">5 - High</option>
+                <option value="6">6 - Very High</option>
+            </select>
+            <input type="submit" value="Create">
         </form>
-      </div>
-    </main>
+    </div>
+</main>
