@@ -8,7 +8,7 @@
         "imageUrl": "/static/images/Ribeaupierre-Syrah.png",
         "price": "19.80",
         "type": "Red",
-        "market rating": "1",
+        "market-rating": "1",
         "_createdOn": 1617194128618
     },
     {
@@ -20,7 +20,7 @@
         "imageUrl": "/static/images/Sasteria.png",
         "price": "7.99",
         "type": "Red",
-        "market rating": "6",
+        "market-rating": "6",
         "_createdOn": 1617194295474
     },
     {
@@ -32,7 +32,7 @@
         "imageUrl": "/static/images/Montepulcano.png",
         "price": "8.75",
         "type": "Red",
-        "market rating": "4",
+        "market-rating": "4",
         "_createdOn": 1617194295480
     },
     {
@@ -44,7 +44,7 @@
         "imageUrl": "/static/images/Kalkstein-Riesling.png",
         "price": "9.75",
         "type": "White",
-        "market rating": "1",
+        "market-rating": "1",
         "_createdOn": 1617194295680
     },
     {
@@ -56,7 +56,7 @@
         "imageUrl": "/static/images/GreenCape-SovBlanc.png",
         "price": "10.95",
         "type": "White",
-        "market rating": "6",
+        "market-rating": "6",
         "_createdOn": 1617194295680
     },
     {
@@ -68,7 +68,7 @@
         "imageUrl": "/static/images/Ribeaupierre-SovBlanc.png",
         "price": "22.99",
         "type": "White",
-        "market rating": "3",
+        "market-rating": "3",
         "_createdOn": 1617194295780
     },
     {
@@ -80,7 +80,7 @@
         "imageUrl": "/static/images/Sasteria-Rose.png",
         "price": "7.99",
         "type": "Rose",
-        "market rating": "1",
+        "market-rating": "1",
         "_createdOn": 1617194295880
     },
     {
@@ -92,7 +92,7 @@
         "imageUrl": "/static/images/LesHaytieres-Rose.png",
         "price": "8.99",
         "type": "Rose",
-        "market rating": "2",
+        "market-rating": "2",
         "_createdOn": 1617194295980
     },
     {
@@ -104,7 +104,7 @@
         "imageUrl": "/static/images/Ribeaupierre-Rose.png",
         "price": "23.99",
         "type": "Rose",
-        "market rating": "5",
+        "market-rating": "5",
         "_createdOn": 1617194296780
     },
     {
@@ -116,7 +116,7 @@
         "imageUrl": "/static/images/Valmarone-sparkl.png",
         "price": "29.99",
         "type": "Sparkling",
-        "market rating": "6",
+        "market-rating": "6",
         "_createdOn": 1617194296980
     },
     {
@@ -128,7 +128,7 @@
         "imageUrl": "/static/images/Verlaine-sparkl.png",
         "price": "39.99",
         "type": "Sparkling",
-        "market rating": "5",
+        "market-rating": "5",
         "_createdOn": 1617194297980
     },
     {
@@ -140,7 +140,7 @@
         "imageUrl": "/static/images/Visiega-sparkl.png",
         "price": "9.99",
         "type": "Sparkling",
-        "market rating": "4",
+        "market-rating": "4",
         "_createdOn": 1617194297980
     },
     {
@@ -148,27 +148,27 @@
         "name": "eeee",
         "type": "red",
         "imageUrl": "https://media.istockphoto.com/photos/red-wine-bottle-picture-id466279485",
-        "market rating": "1"
+        "market-rating": "1"
     },
     {
         "id": 14,
         "name": "RRRRRR",
         "type": "sparkling",
         "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
-        "market rating": "5"
+        "market-rating": "5"
     },
     {
         "id": 15,
         "name": "Test3",
         "type": "white",
         "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
-        "market rating": "6"
+        "market-rating": "6"
     },
     {
         "id": 16,
         "name": "Test4",
         "type": "White",
         "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
-        "market rating": "4"
+        "market-rating": "4"
     }
 ]

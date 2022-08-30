@@ -12,4 +12,4 @@ exports.save = (wine) => {
 };
 
 
-
+exports.getOne = (wineId) => wines.find( x => x.id == wineId)
