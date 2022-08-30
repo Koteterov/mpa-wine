@@ -8,8 +8,20 @@ exports.save = (wine) => {
 
   let data = JSON.stringify(wines, null, 4);
 
-  return fs.writeFile(path.resolve('src', 'wines.json'), data, { encoding: 'utf-8' });
+  return fs.writeFile(path.resolve("src", "wines.json"), data, {
+    encoding: "utf-8",
+  });
 };
 
+exports.getOne = (wineId) => wines.find((x) => x.id == wineId);
 
-exports.getOne = (wineId) => wines.find( x => x.id == wineId)
+exports.getAll = (search = "", fromInput, toInput) => {
+  const from = Number(fromInput) || 0;
+  const to = Number(toInput) || 6;
+
+  const result = wines
+    .filter((x) => x.name.toLowerCase().startsWith(search.toLowerCase()))
+    .filter((x) => x["market-rating"] >= from && x["market-rating"] <= to);
+
+  return result;
+};

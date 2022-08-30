@@ -1,9 +1,12 @@
 const router = require("express").Router();
-const wines = require("../wines.json");
+const wineService = require("../services/wineService");
 
 router.get("/", (req, res) => {
-  res.render("index", {wines});
-  
+  let { search, from, to } = req.query;
+
+  const wines = wineService.getAll(search, from, to);
+
+  res.render("index", { wines, search, from, to });
 });
 
 module.exports = router;
