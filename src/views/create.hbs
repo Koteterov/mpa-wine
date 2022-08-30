@@ -4,8 +4,14 @@
         <form action="/wine/create" method="POST">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
+
             <label for="type">Type</label>
-            <textarea id="type" name="type"></textarea>
+            <select id="type" name="type">
+                <option value="Red">Red</option>
+                <option value="White">White</option>
+                <option value="Rose">Rose</option>
+                <option value="Sparkling">Sparkling</option>
+            </select>
             <label for="image">ImageUrl</label>
             <input type="text" id="image" name="imageUrl">
             <label for="rating">Market Rating</label>

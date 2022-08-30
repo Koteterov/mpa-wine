@@ -156,5 +156,19 @@
         "type": "sparkling",
         "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
         "market rating": "5"
+    },
+    {
+        "id": 15,
+        "name": "Test3",
+        "type": "white",
+        "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
+        "market rating": "6"
+    },
+    {
+        "id": 16,
+        "name": "Test4",
+        "type": "White",
+        "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
+        "market rating": "4"
     }
 ]
