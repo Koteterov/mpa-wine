@@ -1,174 +1,58 @@
 [
     {
-        "id": "1",
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-        "name": "Ribeaupierre Syrah",
-        "netQty": "0.75 l",
-        "origin": "France",
-        "imageUrl": "/static/images/Ribeaupierre-Syrah.png",
-        "price": "19.80",
-        "type": "Red",
-        "market-rating": "1",
-        "_createdOn": 1617194128618
-    },
-    {
-        "id": "2",
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
         "name": "La Sasteria",
-        "netQty": "0.75 l",
         "origin": "Spain",
         "imageUrl": "/static/images/Sasteria.png",
-        "price": "7.99",
         "type": "Red",
-        "market-rating": "6",
-        "_createdOn": 1617194295474
-    },
-    {
-        "id": "3",
-        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-        "name": "Montepulcano d'Abr..",
-        "netQty": "0.75 l",
-        "origin": "Italy",
-        "imageUrl": "/static/images/Montepulcano.png",
-        "price": "8.75",
-        "type": "Red",
-        "market-rating": "4",
-        "_createdOn": 1617194295480
-    },
-    {
-        "id": "4",
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-        "name": "Kalkstein Claus Jacob",
-        "netQty": "0.75 l",
-        "origin": "Germany",
-        "imageUrl": "/static/images/Kalkstein-Riesling.png",
-        "price": "9.75",
-        "type": "White",
-        "market-rating": "1",
-        "_createdOn": 1617194295680
-    },
-    {
-        "id": "5",
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-        "name": "Green Cape",
-        "netQty": "0.75 l",
-        "origin": "South Africa",
-        "imageUrl": "/static/images/GreenCape-SovBlanc.png",
-        "price": "10.95",
-        "type": "White",
-        "market-rating": "6",
-        "_createdOn": 1617194295680
-    },
-    {
-        "id": "6",
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-        "name": "Ribeaupierre Sov Blanc",
-        "netQty": "0.75 l",
-        "origin": "France",
-        "imageUrl": "/static/images/Ribeaupierre-SovBlanc.png",
-        "price": "22.99",
-        "type": "White",
-        "market-rating": "3",
-        "_createdOn": 1617194295780
-    },
-    {
-        "id": "7",
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-        "name": "La Sasteria",
-        "netQty": "0.75 l",
-        "origin": "Spain",
-        "imageUrl": "/static/images/Sasteria-Rose.png",
-        "price": "7.99",
-        "type": "Rose",
-        "market-rating": "1",
-        "_createdOn": 1617194295880
-    },
-    {
-        "id": "8",
-        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-        "name": "Les Haytieres",
-        "netQty": "0.75 l",
-        "origin": "France",
-        "imageUrl": "/static/images/LesHaytieres-Rose.png",
-        "price": "8.99",
-        "type": "Rose",
-        "market-rating": "2",
-        "_createdOn": 1617194295980
-    },
-    {
-        "id": "9",
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-        "name": "Ribeaupierre",
-        "netQty": "0.75 l",
-        "origin": "France",
-        "imageUrl": "/static/images/Ribeaupierre-Rose.png",
-        "price": "23.99",
-        "type": "Rose",
-        "market-rating": "5",
-        "_createdOn": 1617194296780
-    },
-    {
-        "id": "10",
-        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-        "name": "Valmarone Prosecco",
-        "netQty": "0.75 l",
-        "origin": "Italy",
-        "imageUrl": "/static/images/Valmarone-sparkl.png",
-        "price": "29.99",
-        "type": "Sparkling",
-        "market-rating": "6",
-        "_createdOn": 1617194296980
-    },
-    {
-        "id": "11",
-        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-        "name": "Henri De Verlaine",
-        "netQty": "0.75 l",
-        "origin": "France",
-        "imageUrl": "/static/images/Verlaine-sparkl.png",
-        "price": "39.99",
-        "type": "Sparkling",
-        "market-rating": "5",
-        "_createdOn": 1617194297980
-    },
-    {
-        "id": "12",
-        "_ownerId": "847ec027-f659-4086-8032-5173e2f9c93a",
-        "name": "Cava Visiega Brut",
-        "netQty": "0.75 l",
-        "origin": "Spain",
-        "imageUrl": "/static/images/Visiega-sparkl.png",
-        "price": "9.99",
-        "type": "Sparkling",
-        "market-rating": "4",
-        "_createdOn": 1617194297980
-    },
-    {
-        "id": 13,
-        "name": "eeee",
-        "type": "red",
-        "imageUrl": "https://media.istockphoto.com/photos/red-wine-bottle-picture-id466279485",
-        "market-rating": "1"
-    },
-    {
-        "id": 14,
-        "name": "RRRRRR",
-        "type": "sparkling",
-        "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
-        "market-rating": "5"
-    },
-    {
-        "id": 15,
-        "name": "Test3",
-        "type": "white",
-        "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
         "market-rating": "6"
     },
     {
-        "id": 16,
-        "name": "Test4",
-        "type": "White",
-        "imageUrl": "https://seewines.com/uploads/images/products/cherveno_vino_colorito_syrah_seewines_2017_750ml_medal.jpg.png",
+        "name": "Montepulcano d'Abr..",
+        "origin": "Italy",
+        "imageUrl": "/static/images/Montepulcano.png",
+        "type": "Red",
         "market-rating": "4"
+    },
+    {
+        "name": "Kalkstein Claus Jacob",
+        "origin": "Germany",
+        "imageUrl": "/static/images/Kalkstein-Riesling.png",
+        "type": "White",
+        "market-rating": "1"
+    },
+    {
+        "name": "Green Cape",
+        "origin": "South Africa",
+        "imageUrl": "/static/images/GreenCape-SovBlanc.png",
+        "type": "White",
+        "market-rating": "6"
+    },
+    {
+        "name": "La Sasteria",
+        "origin": "Spain",
+        "imageUrl": "/static/images/Sasteria-Rose.png",
+        "type": "Rose",
+        "market-rating": "1"
+    },
+    {
+        "name": "Les Haytieres",
+        "origin": "France",
+        "imageUrl": "/static/images/LesHaytieres-Rose.png",
+        "type": "Rose",
+        "market-rating": "2"
+    },
+    {
+        "name": "Valmarone Prosecco",
+        "origin": "Italy",
+        "imageUrl": "/static/images/Valmarone-sparkl.png",
+        "type": "Sparkling",
+        "market-rating": "6"
+    },
+    {
+        "name": "Henri De Verlaine",
+        "origin": "France",
+        "imageUrl": "/static/images/Verlaine-sparkl.png",
+        "type": "Sparkling",
+        "market-rating": "5"
     }
 ]

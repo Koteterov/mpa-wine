@@ -1,10 +1,8 @@
 const router = require("express").Router();
-// const { Wine } = require("../models/Wine");
-
 
 const wineService = require("../services/wineService");
 
-const getOne = require ("../services/wineService")
+const getOne = require ("../services/wineService");
 
 router.get("/create", (req, res) => {
   res.render("create");
@@ -19,7 +17,8 @@ router.post("/create", async (req, res) => {
   }
 
   try {
-    await wineService.save(wine);
+    await wineService.create(wine);
+
     res.redirect("/");
   } catch (error) {}
 });
