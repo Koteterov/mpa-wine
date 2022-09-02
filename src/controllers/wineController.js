@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const wineService = require("../services/wineService");
 
-const getOne = require ("../services/wineService");
+// const getOne = require ("../services/wineService");
 
 router.get("/create", (req, res) => {
   res.render("create");
