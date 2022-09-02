@@ -1,32 +1,22 @@
 const express = require("express");
-const handlebars = require("express-handlebars");
-const routes = require('./routes');
-const mongoose = require("mongoose");
+const routes = require("./routes");
+
+const { initializeDatabase } = require("./config/database");
 
 const app = express();
 
-const url = 'mongodb://localhost:27017/winesCollection';
-
-mongoose.connect(url)
-  .then(() => {
-    console.log('db connected');
-  })
-  .catch((err) => {
-    console.log('DB error', err);
-  })
+require("./config/handlebars")(app);
 
 app.use("/static", express.static("public"));
 
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({ extended: false }));
 
+app.use(routes);
 
-app.engine("hbs", handlebars.engine({
-    extname: "hbs",
+initializeDatabase()
+  .then(() => {
+    app.listen(5000, () => console.log("Server is listening on port 5000"));
   })
-);
-app.set("view engine", "hbs");
-app.set("views", "./src/views")
-
-app.use(routes)
-
-app.listen(5000, () => console.log("Server is listening on port 5000"));
+  .catch((err) => {
+    console.log("cannot connect to DB", err);
+  });
