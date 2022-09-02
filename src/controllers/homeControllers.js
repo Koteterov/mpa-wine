@@ -1,12 +1,18 @@
 const router = require("express").Router();
 const wineService = require("../services/wineService");
 
-router.get("/", (req, res) => {
-  let { search, from, to } = req.query;
+router.get("/", async (req, res) => {
 
-  const wines = wineService.getAll(search, from, to);
+  // let { search, from, to } = req.query;
 
-  res.render("index", { wines, search, from, to });
+  
+  // const wines = await wineService.getAll(search, from, to);
+  const wines = await wineService.getAll();
+
+  console.log('wines from Mongo DB',wines);
+
+  // res.render("index", { wines, search, from, to });
+  res.render("index", { wines });
 });
 
 module.exports = router;
