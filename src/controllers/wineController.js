@@ -26,10 +26,9 @@ router.post("/create", async (req, res) => {
 });
 
 router.get("/details/:id", async (req, res) => {
+  const wine = await wineService.getOne(req.params.id);
 
-  const wine = await wineService.getOne(req.params.id)
-
-  res.render("details", {wine});
+  res.render("details", { wine });
 });
 
 module.exports = router;
