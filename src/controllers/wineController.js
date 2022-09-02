@@ -20,7 +20,9 @@ router.post("/create", async (req, res) => {
     await wineService.create(wine);
 
     res.redirect("/");
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/details/:id", async (req, res) => {

@@ -1,11 +1,28 @@
 const mongoose = require("mongoose");
 
 const wineSchema = new mongoose.Schema({
-  name: String,
-  origin: String,
-  imageUrl: String,
-  type: String,
-  "market-rating": String,
+  name: {
+    type: String,
+    required: true
+  },
+  origin: {
+    type: String,
+    required: true,
+    minlength: 2,
+  },
+  type: {
+    type: String,
+    required: true,
+  },
+  imageUrl: {
+    type: String,
+    required: true,
+  },
+  "market-rating": {
+    type: Number,
+    min: 1,
+    max: 6
+  },
 });
 
 const Wine = mongoose.model("Wine", wineSchema);
