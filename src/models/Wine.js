@@ -17,6 +17,10 @@ const wineSchema = new mongoose.Schema({
   imageUrl: {
     type: String,
     required: true,
+    validate: {
+      validator: /^https?|\/static/g,
+      message: "Invalid image url",
+    }
   },
   "market-rating": {
     type: Number,
@@ -31,9 +35,9 @@ const wineSchema = new mongoose.Schema({
   ],
 });
 
-wineSchema.path("imageUrl").validate(function () {
-  return this.imageUrl.startsWith("http");
-}, "Invalid url image");
+// wineSchema.path("imageUrl").validate(function () {
+//   return this.imageUrl.startsWith("http");
+// }, "Invalid image url");
 
 const Wine = mongoose.model("Wine", wineSchema);
 
