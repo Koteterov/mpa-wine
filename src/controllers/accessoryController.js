@@ -8,8 +8,9 @@ router.get("/", (req, res) => {
 
 router.get("/:id", async (req, res) => {
   const wine = await wineService.getOne(req.params.id);
+  const accessories = await accessoryService.getAll(wine.accessories).lean();
 
-  res.render("accessory/attach", { wine });
+  res.render("accessory/attach", { wine, accessories });
 });
 
 router.post("/create", async (req, res) => {
