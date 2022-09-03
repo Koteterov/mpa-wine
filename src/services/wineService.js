@@ -1,6 +1,7 @@
 const path = require("path");
 const Wine = require("../models/Wine")
 
+const Accessory = require("../models/Accessory")
 
 exports.create = (wine) => Wine.create(wine);
 
@@ -23,3 +24,14 @@ exports.getAll = async () => {
 
   // return result;
 };
+
+exports.attachAccessory = async (wineId, accId) => {
+  const wine = await Wine.findById(wineId) 
+  const accessory = await Accessory.findById(accId)
+
+  wine.accessories.push(accessory)
+  accessory.wines.push(wine)
+
+  await wine.save()
+  await accessory.save()
+}

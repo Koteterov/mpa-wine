@@ -13,6 +13,14 @@ router.get("/:id", async (req, res) => {
   res.render("accessory/attach", { wine, accessories });
 });
 
+router.post("/:wineId", async (req, res) => {
+  const accId = req.body.accessory;
+
+  await wineService.attachAccessory(req.params.wineId, accId);
+
+  res.redirect(`/accessory/${req.params.wineId}`);
+});
+
 router.post("/create", async (req, res) => {
   await accessoryService.create(req.body);
 
