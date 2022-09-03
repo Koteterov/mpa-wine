@@ -7,6 +7,19 @@
         <p><span>Market rating:</span>{{wine.market-rating}}</p>
         <a class="btn" href="/">Back</a>
         <a class="btn" href="/accessory/{{wine._id}}">Attach Accessory</a>
-
     </div>
+    <h2>Accessories</h2>
+    <div class="accessories">
+        {{#each accessories}}
+        <div class="accessory">
+            <img src="{{imageUrl}}" alt="accessory name">
+            <h3>{{name}}</h3>
+            <p>{{description}}</p>
+        </div>
+        {{else}}
+        <h3 class="italic">This wine has no accessories yet...</h3>
+
+        {{/each}}
+    </div>
+
 </main>

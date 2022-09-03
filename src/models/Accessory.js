@@ -12,7 +12,7 @@ const AccessorySchema = new mongoose.Schema({
       validator: function () {
         return this.imageUrl.startsWith("http");
       },
-      message: "Invalid url image",
+      message: "Invalid image url",
     },
   },
   description: {

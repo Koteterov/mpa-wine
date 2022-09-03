@@ -1,6 +1,8 @@
 const router = require("express").Router();
 
 const wineService = require("../services/wineService");
+const accessoryService = require("../services/accessoryService")
+
 
 // const getOne = require ("../services/wineService");
 
@@ -27,8 +29,11 @@ router.post("/create", async (req, res) => {
 
 router.get("/details/:id", async (req, res) => {
   const wine = await wineService.getOne(req.params.id);
+  const accessories = await accessoryService.getAllAttached(wine.accessories).lean()
 
-  res.render("details", { wine });
+  console.log('accessories', accessories);
+
+  res.render("details", { wine, accessories});
 });
 
 module.exports = router;
