@@ -5,7 +5,7 @@ const Accessory = require("../models/Accessory")
 
 exports.create = (wine) => Wine.create(wine);
 
-exports.getOne = (wineId) => Wine.findById(wineId).lean();
+exports.getOne = (wineId) => Wine.findById(wineId).populate('accessories').lean();
 
 exports.getAll = async () => {
   // search = "", fromInput, toInput
