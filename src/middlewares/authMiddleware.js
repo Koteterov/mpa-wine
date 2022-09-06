@@ -10,8 +10,10 @@ exports.auth = async (req, res, next) => {
   if (token) {
     try {
       let decodedToken = await jwtVeryfy(token, secret);
-      req.user = decodedToken
+      req.user = decodedToken;
 
+      res.locals.user = decodedToken;
+      
     } catch (error) {
       console.log(error);
       return res.redirect("/404");
@@ -22,9 +24,9 @@ exports.auth = async (req, res, next) => {
 };
 
 exports.isAuth = (req, res, next) => {
-    if (!req.user) {
-      return  res.redirect('/404')
-    }
+  if (!req.user) {
+    return res.redirect("/404");
+  }
 
-    next();
-}
+  next();
+};

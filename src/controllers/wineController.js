@@ -36,6 +36,11 @@ router.get("/details/:id", async (req, res) => {
 router.get("/:wineId/edit", async (req, res) => {
   const wine = await wineService.getOne(req.params.wineId);
 
+  if (wine.owner != req.user._id) {
+    return res.redirect("/404")
+    
+  }
+
   wine[`type${wine.type}`] = true;
 
   if (!wine) {
@@ -47,6 +52,12 @@ router.get("/:wineId/edit", async (req, res) => {
 
 router.post("/:wineId/edit", async (req, res) => {
   const wine = await wineService.getOne(req.params.wineId);
+
+  if (wine.owner != req.user._id) {
+    return res.redirect("/404")
+    
+  }
+
 
   let modifiedWine = await wineService.edit(req.params.wineId, req.body);
 
