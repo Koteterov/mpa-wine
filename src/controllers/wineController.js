@@ -31,4 +31,8 @@ router.get("/details/:id", async (req, res) => {
 
 });
 
+router.get("/:wineId/edit", (req, res) => {
+  res.render("edit")
+})
+
 module.exports = router;
