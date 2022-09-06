@@ -5,6 +5,8 @@ const Accessory = require("../models/Accessory");
 
 exports.create = (wine) => Wine.create(wine);
 
+exports.edit = (wineId, wineData) => Wine.findByIdAndUpdate(wineId, wineData);
+
 exports.getOne = (wineId) =>
   Wine.findById(wineId).populate("accessories").lean();
 
@@ -33,3 +35,4 @@ exports.attachAccessory = async (wineId, accId) => {
   await wine.save();
   await accessory.save();
 };
+

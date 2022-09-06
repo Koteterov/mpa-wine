@@ -1,23 +1,42 @@
-        <main>
-            <h1>Edit Cube</h1>
-            <div class="form">
-                <form action="#" method="POST">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" value="">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description"></textarea>
-                    <label for="image">ImageUrl</label>
-                    <input type="text" id="image" name="imageUrl" value="">
-                    <label for="difficulty">Difficulty</label>
-                    <select id="difficulty" name="difficultyLevel" />
-                    <option value="1">1 - Very Easy</option>
-                    <option value="2">2 - Easy</option>
-                    <option value="3">3 - Medium (Standard 3x3)</option>
-                    <option value="4">4 - Intermediate</option>
-                    <option value="5">5 - Expert</option>
-                    <option value="6">6 - Hardcore</option>
-                    </select>
-                    <input type="submit" value="Edit">
-                </form>
-            </div>
-        </main>
+<main>
+    <h1>Edit Wine</h1>
+    <div class="form">
+        <form method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value={{wine.name}}>
+
+            <label for="origin">Origin</label>
+            <input type="text" id="origin" name="origin" value={{wine.origin}}>
+
+            <label for="type">Type</label>
+            <select id="type" name="type">
+
+                <option value="Red" {{#if wine.typeRed}} selected {{/if}}>Red</option>
+                <option value="White" {{#if wine.typeWhite}} selected {{/if}}>White</option>
+                <option value="Rose" {{#if wine.typeRose}} selected {{/if}}>Rose</option>
+                <option value="Sparkling" {{#if wine.typeSparkling}} selected {{/if}}>Sparkling</option>
+            </select>
+
+            <label for="image">ImageUrl</label>
+            <input type="text" id="image" name="imageUrl" value={{wine.imageUrl}}>
+
+            <label for="rating">Market Rating</label>
+            <select id="rating" name="market-rating">
+                <option value="1">1 - Very Low</option>
+                <option value="2">2 - Low</option>
+                <option value="3">3 - Medium</option>
+                <option value="4">4 - Intermediate</option>
+                <option value="5">5 - High</option>
+                <option value="6">6 - Very High</option>
+            </select>
+
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+</main>
+
+<script>
+
+    document.getElementById('rating').value = {{ wine.market - rating }};
+
+</script>
