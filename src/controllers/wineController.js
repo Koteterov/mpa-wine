@@ -30,7 +30,8 @@ router.post("/create", isAuth, async (req, res) => {
 
 router.get("/details/:id", async (req, res) => {
   const wine = await wineService.getOne(req.params.id);
-  res.render("details", { wine });
+  let isOwner = wine.owner == req.user?._id
+  res.render("details", { wine, isOwner });
 });
 
 router.get("/:wineId/edit", async (req, res) => {

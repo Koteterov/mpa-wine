@@ -6,8 +6,14 @@
         <p><span>Type:</span>{{wine.type}}</p>
         <p><span>Market rating:</span>{{wine.market-rating}}</p>
         <a class="btn" href="/">Back</a>
+
+        {{#if user}}
         <a class="btn" href="/accessory/{{wine._id}}">Attach Accessory</a>
-        <a class="btn" href="/wine/{{wine._id}}/edit">Edit Wine</a>
+            {{#if isOwner}}
+            <a class="btn" href="/wine/{{wine._id}}/edit">Edit Wine</a>
+            <a class="btn" href="/wine/{{wine._id}}/delete">Delete Wine</a>
+            {{/if}}
+        {{/if}}
     </div>
     <h2>Accessories</h2>
     <div class="accessories">
