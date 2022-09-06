@@ -10,6 +10,9 @@ router.get("/create", isAuth, (req, res) => {
 
 router.post("/create", isAuth, async (req, res) => {
   const wine = req.body;
+  wine.owner = req.user._id
+
+
 
   // validate...
   if (wine.name.length < 3) {

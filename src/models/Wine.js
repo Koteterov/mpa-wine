@@ -33,6 +33,10 @@ const wineSchema = new mongoose.Schema({
       ref: "Accessory",
     },
   ],
+  owner: {
+    type: mongoose.Types.ObjectId,
+    ref: "User"
+  }
 });
 
 // wineSchema.path("imageUrl").validate(function () {
