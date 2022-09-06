@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const {promisify} = require ("util")
 const User = require("../models/User");
 
 const saltRounds = 10;
@@ -33,6 +34,10 @@ exports.login = async ({ username, password }) => {
   if (!isValid) {
     return;
   }
+
+// another way:
+//   const jwtPromise = promisify(jwt.sign)
+//   jwtPromise()
 
   let result = new Promise((resolve, reject) => {
       jwt.sign({ _id: user._id, username: user.username }, secret, {expiresIn: '3d'}, (err, token) => {
