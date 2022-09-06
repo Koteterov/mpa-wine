@@ -2,11 +2,13 @@ const router = require("express").Router();
 
 const wineService = require("../services/wineService");
 
-router.get("/create", (req, res) => {
+const {isAuth} = require("../middlewares/authMiddleware")
+
+router.get("/create", isAuth, (req, res) => {
   res.render("create");
 });
 
-router.post("/create", async (req, res) => {
+router.post("/create", isAuth, async (req, res) => {
   const wine = req.body;
 
   // validate...

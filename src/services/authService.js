@@ -3,8 +3,7 @@ const jwt = require("jsonwebtoken");
 const {promisify} = require ("util")
 const User = require("../models/User");
 
-const saltRounds = 10;
-const secret = 'sjxbcdjhjh122msn'
+const {secret, saltRounds} = require("../config/constants")
 
 exports.register = async ({ username, password, repeatPassword }) => {
   // User.create(userData)
