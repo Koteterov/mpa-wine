@@ -11,10 +11,10 @@ router.post("/register", async (req, res) => {
   if (createdUser) {
     res.redirect("/auth/login");
   } else {
-    //   res.redirect("404");
+    //i.e. password != repeatPassword !!
+      res.redirect("404");
   }
 
-  console.log(createdUser);
 });
 
 router.get("/login", (req, res) => {

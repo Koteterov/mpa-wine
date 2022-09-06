@@ -12,5 +12,8 @@ router.get("/about", aboutController);
 router.use("/accessory", accessoryController);
 router.use("/wine", wineController);
 router.use("/auth", authController);
+router.use("*", (req, res) => {
+    res.render("404")
+})
 
 module.exports = router;
