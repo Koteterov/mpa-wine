@@ -7,6 +7,8 @@ exports.create = (wine) => Wine.create(wine);
 
 exports.edit = (wineId, wineData) => Wine.findByIdAndUpdate(wineId, wineData);
 
+exports.delete =(wineId) => Wine.findByIdAndDelete(wineId);
+
 exports.getOne = (wineId) =>
   Wine.findById(wineId).populate("accessories").lean();
 
@@ -28,6 +30,8 @@ exports.getAll = async (search = "", fromInput, toInput) => {
 exports.attachAccessory = async (wineId, accId) => {
   const wine = await Wine.findById(wineId);
   const accessory = await Accessory.findById(accId);
+
+  console.log('wine', wine);
 
   wine.accessories.push(accessory);
   accessory.wines.push(wine);

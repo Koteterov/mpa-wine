@@ -59,10 +59,25 @@ router.post("/:wineId/edit", async (req, res) => {
     
   }
 
-
-  let modifiedWine = await wineService.edit(req.params.wineId, req.body);
+  await wineService.edit(req.params.wineId, req.body);
 
   res.redirect(`/wine/details/${wine._id}`);
 });
+
+router.get("/:wineId/delete", async (req, res) => {
+  const wine = await wineService.getOne(req.params.wineId);
+
+  wine[`type${wine.type}`] = true;
+
+
+  res.render('delete', {wine})
+})
+
+router.post("/:wineId/delete", async (req, res) => {
+
+  await wineService.delete(req.params.wineId)
+
+  res.redirect("/")
+})
 
 module.exports = router;

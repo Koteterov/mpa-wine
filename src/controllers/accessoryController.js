@@ -20,6 +20,8 @@ router.post("/:wineId", async (req, res) => {
 
   await wineService.attachAccessory(req.params.wineId, accId);
 
+  
+
   res.redirect(`/accessory/${req.params.wineId}`);
 });
 
