@@ -18,7 +18,7 @@ const wineSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: {
-      validator: /^https?|\/static/g,
+      validator: /^https?|^\/static.+/,
       message: "Invalid image url",
     }
   },
