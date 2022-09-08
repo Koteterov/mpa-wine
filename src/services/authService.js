@@ -25,13 +25,13 @@ exports.login = async ({ username, password }) => {
   let user = await User.findOne({ username });
 
   if (!user) {
-    return;
+    throw new Error("Invalid user or password!");
   }
 
   let isValid = await bcrypt.compare(password, user.password);
 
   if (!isValid) {
-    return;
+    throw new Error("Invalid user or password!");
   }
 
 // another way:
