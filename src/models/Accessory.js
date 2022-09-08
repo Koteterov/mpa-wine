@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 
 const AccessorySchema = new mongoose.Schema({
+
   name: {
     type: String,
-    required: true,
+    required: [true, "Name is required!"]
   },
   imageUrl: {
     type: String,
@@ -26,6 +27,8 @@ const AccessorySchema = new mongoose.Schema({
       ref: "Wine",
     },
   ],
+
+  
 });
 
 const Accessory = mongoose.model("Accessory", AccessorySchema);

@@ -15,21 +15,23 @@ router.get("/:id", async (req, res) => {
   res.render("accessory/attach", { wine, accessories });
 });
 
+router.post("/create", async (req, res) => {
+  try {
+    await accessoryService.create(req.body);
+    res.redirect("/");
+  } catch (error) {
+    res.status(400).render("accessory/create", { error: error.message });
+  }
+});
+
 router.post("/:wineId", async (req, res) => {
   const accId = req.body.accessory;
 
   await wineService.attachAccessory(req.params.wineId, accId);
 
-  
-
   res.redirect(`/accessory/${req.params.wineId}`);
 });
 
-router.post("/create", async (req, res) => {
-  await accessoryService.create(req.body);
-
-  res.redirect("/");
-});
 router.get("/create", (req, res) => {
   res.render("accessory/create");
 });
