@@ -20,7 +20,11 @@ router.post("/create", async (req, res) => {
     await accessoryService.create(req.body);
     res.redirect("/");
   } catch (error) {
-    res.status(400).render("accessory/create", { error: error.message });
+    const errMessage = error.message
+      .split(", ")
+      .map((x) => x.split(": ").slice(-1))
+      .join(" ");
+    res.status(400).render("accessory/create", { error: errMessage });
   }
 });
 
