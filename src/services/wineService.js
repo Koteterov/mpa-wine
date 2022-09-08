@@ -5,6 +5,7 @@ const Accessory = require("../models/Accessory");
 
 exports.create = (wine) => Wine.create(wine);
 
+// {runValidator: true} as a third param??
 exports.edit = (wineId, wineData) => Wine.findByIdAndUpdate(wineId, wineData);
 
 exports.delete =(wineId) => Wine.findByIdAndDelete(wineId);
@@ -31,7 +32,6 @@ exports.attachAccessory = async (wineId, accId) => {
   const wine = await Wine.findById(wineId);
   const accessory = await Accessory.findById(accId);
 
-  console.log('wine', wine);
 
   wine.accessories.push(accessory);
   accessory.wines.push(wine);
