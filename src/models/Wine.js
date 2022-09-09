@@ -4,6 +4,7 @@ const wineSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    minlength: 2
   },
   origin: {
     type: String,

@@ -5,8 +5,7 @@ const Accessory = require("../models/Accessory");
 
 exports.create = (wine) => Wine.create(wine);
 
-// {runValidator: true} as a third param??
-exports.edit = (wineId, wineData) => Wine.findByIdAndUpdate(wineId, wineData);
+exports.edit = (wineId, wineData) => Wine.findByIdAndUpdate(wineId, wineData, {runValidators: true});
 
 exports.delete =(wineId) => Wine.findByIdAndDelete(wineId);
 

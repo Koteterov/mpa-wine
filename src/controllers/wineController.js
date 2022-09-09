@@ -55,9 +55,12 @@ router.post("/:wineId/edit", async (req, res) => {
     return res.redirect("/404");
   }
 
-  await wineService.edit(req.params.wineId, req.body);
-
-  res.redirect(`/wine/details/${wine._id}`);
+  try {
+    await wineService.edit(req.params.wineId, req.body);
+    res.redirect(`/wine/details/${wine._id}`);
+  } catch (error) {
+    res.status(400).render("edit", { error: error.message });
+  }
 });
 
 router.get("/:wineId/delete", async (req, res) => {
