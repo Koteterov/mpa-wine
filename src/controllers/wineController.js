@@ -1,21 +1,26 @@
 const router = require("express").Router();
+const {body, validationResult} = require("express-validator")
 
 const wineService = require("../services/wineService");
-
 const { isAuth } = require("../middlewares/authMiddleware");
 
 router.get("/create", isAuth, (req, res) => {
   res.render("create");
 });
 
-router.post("/create", isAuth, async (req, res) => {
+router.post("/create", isAuth, 
+body('name', "Name should be between 3 and 30 symbols!").isLength({min: 3, max: 30}).trim(),
+
+async (req, res) => {
   const wine = req.body;
   wine.owner = req.user._id;
 
   try {
-    // validate...
-    if (wine.name.length < 3) {
-      throw new Error("Name must be at least 3 symbols!");
+
+    const errors = Object.values(validationResult(req).mapped());
+
+    if (errors.length > 0) {
+      throw new Error(errors.map(e => e.msg).join('\n'));
     }
 
     await wineService.create(wine);

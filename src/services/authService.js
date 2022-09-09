@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const {promisify} = require ("util")
+const {body, validationResult} = require("express-validator")
 const User = require("../models/User");
 
 const {secret, saltRounds} = require("../config/constants")
@@ -16,16 +17,16 @@ exports.register = async ({ username, password, repeatPassword }) => {
     throw new Error("This user already exists!")
   }
 
-  if (!password.match(emailPattern)) {
-    throw new Error("Password should contain only letters and numbers!")
-  }
-  if (password.length < 3) {
-    throw new Error("Password should be at least 3 symbols long!")
-  }
+  // if (!password.match(emailPattern)) {
+  //   throw new Error("Password should contain only letters and numbers!")
+  // }
+  // if (password.length < 3) {
+  //   throw new Error("Password should be at least 3 symbols long!")
+  // }
 
-  if (password != repeatPassword) {
-    throw new Error("Paswords don't match!");
-  }
+  // if (password != repeatPassword) {
+  //   throw new Error("Paswords don't match!");
+  // }
 
   let hashedPassword = await bcrypt.hash(password, saltRounds);
   let createdUser = User.create({

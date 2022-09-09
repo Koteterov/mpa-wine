@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const authService = require("../services/authService");
+const { body, validationResult } = require("express-validator");
+
 const { sessionName } = require("../config/constants");
 const validator = require("validator");
 
@@ -7,21 +9,38 @@ router.get("/register", (req, res) => {
   res.render("auth/register");
 });
 
-router.post("/register", async (req, res) => {
+router.post(
+  "/register",
+  body('username', 'Username / email must be at least 4 characters long').trim().isLength({ min: 4 }),
+  body('password', 'Password must be at least 4 characters long and should contain only letters and numbers').trim().isLength({ min: 4 }).isAlphanumeric(),
+  body('repeatPassword').trim().custom((value, { req }) => {
 
-  try {
-
-    if (!validator.isEmail(req.body.username)) {
-      throw new Error("Invalid email!");
+    if (value != req.body.password) {
+      throw new Error("Passwords don't match!!!");
     }
-  
-    await authService.register(req.body);
-    res.redirect("/auth/login");
-    
-  } catch (error) {
-    res.status(400).render("auth/register", { error: error.message });
+    return true;
+  }),
+  async (req, res) => {
+
+    try {
+      //using express-validator
+      const errors = Object.values(validationResult(req).mapped());
+      if (errors.length > 0) {
+        throw new Error(errors.map((e) => e.msg).join("\n"));
+      }
+
+      // using validator
+      if (!validator.isEmail(req.body.username)) {
+        throw new Error("Invalid email!");
+      }
+
+      await authService.register(req.body);
+      res.redirect("/auth/login");
+    } catch (error) {
+      res.status(400).render("auth/register", { error: error.message });
+    }
   }
-});
+);
 
 router.get("/login", (req, res) => {
   res.render("auth/login");
