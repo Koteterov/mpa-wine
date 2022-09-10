@@ -11,12 +11,10 @@ exports.auth = async (req, res, next) => {
     try {
       let decodedToken = await jwtVeryfy(token, secret);
       req.user = decodedToken;
-
       res.locals.user = decodedToken;
-      
     } catch (error) {
-      console.log(error);
-      return res.redirect("/404");
+      res.clearCookie(sessionName);
+      return res.redirect("/auth/login");
     }
   }
 
@@ -30,4 +28,3 @@ exports.isGuest = (req, res, next) => {
 
   next();
 };
-

@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const wineService = require("../services/wineService");
 const accessoryService = require("../services/accessoryService");
+const { isGuest } = require("../middlewares/authMiddleware");
 
-router.get("/", (req, res) => {
+
+router.get("/", isGuest, (req, res) => {
   res.render("accessory/create");
 });
 
@@ -15,7 +17,7 @@ router.get("/:id", async (req, res) => {
   res.render("accessory/attach", { wine, accessories });
 });
 
-router.post("/create", async (req, res) => {
+router.post("/create", isGuest, async (req, res) => {
   try {
     await accessoryService.create(req.body);
     res.redirect("/");

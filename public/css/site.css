@@ -32,7 +32,7 @@ header {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    background-color: #7a7063;
+    background-color: #747474;
 }
 
 header ul li {
@@ -101,12 +101,12 @@ button, main a.btn {
     width: 35%;
     margin: 12px;
     border-radius: 4px;
-    background: #7a7063;
+    background: #747474;
     color: white;
 }
 
 .details a.btn{
-    width: 28%;
+    width: 42%;
 }
 
 button:hover {
@@ -128,7 +128,7 @@ a {
 div.details {
     display: block;
     margin: auto;
-    width: 50%;
+    width: 44%;
     background-color: #f3f3f2;
     padding: 1em;
 }
@@ -156,7 +156,7 @@ div.about a {
 }
 
 form label {
-    background: #7a7063;
+    background: #747474;
     color: white;
     padding: 12px;
     border-top-left-radius: 4px;
@@ -186,7 +186,7 @@ input.search {
 }
 
 input[type=submit] {
-    background-color: #7a7063;
+    background-color: #747474;
     border: none;
     padding: 8px;
     text-align: center;
@@ -252,7 +252,7 @@ h2{
 }
 
 footer {
-    background: #7a7063;
+    background: #747474;
     padding: 1em;
     text-align: center;
     color: white;
