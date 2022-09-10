@@ -32,7 +32,7 @@ header {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    background-color: #607588;
+    background-color: #7a7063;
 }
 
 header ul li {
@@ -77,7 +77,7 @@ div.cube {
 }
 
 div.cube:hover p.name {
-    background: #607588;
+    background: #a7a5a1;
     color: white;
 }
 
@@ -101,7 +101,7 @@ button, main a.btn {
     width: 35%;
     margin: 12px;
     border-radius: 4px;
-    background: #607588;
+    background: #7a7063;
     color: white;
 }
 
@@ -156,7 +156,7 @@ div.about a {
 }
 
 form label {
-    background: #607588;
+    background: #7a7063;
     color: white;
     padding: 12px;
     border-top-left-radius: 4px;
@@ -186,7 +186,7 @@ input.search {
 }
 
 input[type=submit] {
-    background-color: #545775;
+    background-color: #7a7063;
     border: none;
     padding: 8px;
     text-align: center;
@@ -201,7 +201,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #718F94;
+    background-color: #51422e;
     cursor: pointer;
 }
 
@@ -252,7 +252,7 @@ h2{
 }
 
 footer {
-    background: #607588;
+    background: #7a7063;
     padding: 1em;
     text-align: center;
     color: white;

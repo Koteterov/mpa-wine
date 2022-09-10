@@ -2,13 +2,13 @@ const router = require("express").Router();
 const {body, validationResult} = require("express-validator")
 
 const wineService = require("../services/wineService");
-const { isAuth } = require("../middlewares/authMiddleware");
+const { isGuest } = require("../middlewares/authMiddleware");
 
-router.get("/create", isAuth, (req, res) => {
+router.get("/create", isGuest, (req, res) => {
   res.render("create");
 });
 
-router.post("/create", isAuth, 
+router.post("/create", isGuest, 
 body('name', "Name should be between 3 and 30 symbols!").isLength({min: 3, max: 30}).trim(),
 
 async (req, res) => {

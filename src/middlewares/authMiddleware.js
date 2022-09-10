@@ -23,10 +23,11 @@ exports.auth = async (req, res, next) => {
   next();
 };
 
-exports.isAuth = (req, res, next) => {
+exports.isGuest = (req, res, next) => {
   if (!req.user) {
-    return res.redirect("/404");
+    return res.redirect("/auth/login");
   }
 
   next();
 };
+
