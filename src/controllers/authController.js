@@ -2,10 +2,13 @@ const router = require("express").Router();
 const authService = require("../services/authService");
 const { body, validationResult } = require("express-validator");
 
+const { isUser } = require("../middlewares/authMiddleware");
+
+
 const { sessionName } = require("../config/constants");
 const validator = require("validator");
 
-router.get("/register", (req, res) => {
+router.get("/register", isUser, (req, res) => {
   res.render("auth/register");
 });
 
@@ -43,7 +46,7 @@ router.post(
   }
 );
 
-router.get("/login", (req, res) => {
+router.get("/login", isUser, (req, res) => {
   res.render("auth/login");
 });
 
