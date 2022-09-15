@@ -4,10 +4,15 @@ const wineService = require("../services/wineService");
 router.get("/", async (req, res) => {
 
   let { search, from, to } = req.query;
+  try {
+    const wines = await wineService.getAll(search, from, to);
 
-  const wines = await wineService.getAll(search, from, to);
+    res.render("index", { wines, search, from, to });
+  
+  } catch (error) {
+    console.log(error);
+  }
 
-  res.render("index", { wines, search, from, to });
 });
 
 module.exports = router;
