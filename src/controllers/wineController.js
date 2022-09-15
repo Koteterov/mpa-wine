@@ -45,12 +45,12 @@ router.get("/details/:id", async (req, res) => {
   }
 });
 
-router.get("/:wineId/edit", async (req, res) => {
+router.get("/:wineId/edit", isGuest, async (req, res, next) => {
   try {
     const wine = await wineService.getOne(req.params.wineId);
 
     if (wine.owner != req.user._id) {
-      return res.redirect("/404");
+      return next({ message: "Not authorized!", status: 401 });
     }
 
     wine[`type${wine.type}`] = true;
@@ -59,13 +59,12 @@ router.get("/:wineId/edit", async (req, res) => {
       return res.redirect("/404");
     }
     res.render("edit", { wine });
-    
   } catch (error) {
     console.log(error);
   }
 });
 
-router.post("/:wineId/edit", async (req, res) => {
+router.post("/:wineId/edit", isGuest, async (req, res) => {
   const wine = await wineService.getOne(req.params.wineId);
 
   if (wine.owner != req.user._id) {
