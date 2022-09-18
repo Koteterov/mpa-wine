@@ -8,3 +8,19 @@ Products can be searched by name and rating.
 * Framework - Express.js
 * Server-side rendering - Handlebars
 * ODM library for MongoDB - Mongoose
+## :information_source: Structure
+The application has the following parts:
+### Home page / BROWSE
+*
+### LOGIN
+*
+### REGISTER
+*
+### ADD WINE
+*
+### ADD ACCESSORY
+*
+### DETAILS PAGE
+*
+### ABOUT
+* Some more information about the site
