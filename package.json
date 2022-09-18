@@ -2,8 +2,10 @@
   "name": "mpa-wine",
   "version": "1.0.0",
   "description": "MPA with Express and Handlebars",
-  "main": "src/index.js",
-
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Koteterov/mpa-wine.git"
@@ -29,7 +31,7 @@
     "nodemon": "^2.0.19"
   },
   "engines": {
-    "node": "16.x"
+    "node": "14.x"
   }
 
 }
