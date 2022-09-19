@@ -22,7 +22,7 @@ app.use(errorHandler);
 
 initializeDatabase()
   .then(() => {
-    app.listen(process.env.PORT || 5000, () => console.log("Server is listening on port 5000"));
+    app.listen(process.env.PORT || 10000, () => console.log("Server is listening on port 5000"));
   })
   .catch((err) => {
     console.log("cannot connect to DB", err);
