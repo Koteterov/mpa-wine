@@ -24,3 +24,6 @@ The application has the following parts:
 *
 ### ABOUT
 * Some more information about the site
+
+## :paperclips: Project link on Internet
+* Now available at :point_right: : https://mpa-wine.herokuapp.com/
