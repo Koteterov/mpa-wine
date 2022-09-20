@@ -1,4 +1,4 @@
 const mongoose = require("mongoose");
-const connectionString = `mongodb+srv://${process.env.DB_USER}mpa-wine.kxcjphs.mongodb.net/winesCollection`;
+const connectionString = process.env.DB_HOST;
 
 exports.initializeDatabase = () => mongoose.connect(connectionString);
