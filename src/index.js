@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const cookieParser = require("cookie-parser");
 
 const routes = require("./routes");
@@ -8,6 +9,7 @@ const { auth } = require("./middlewares/authMiddleware");
 const { errorHandler } = require("./middlewares/errorMiddlleware");
 
 const app = express();
+const port = process.env.PORT || 5000
 
 require("./config/handlebars")(app);
 
@@ -22,7 +24,7 @@ app.use(errorHandler);
 
 initializeDatabase()
   .then(() => {
-    app.listen(process.env.PORT || 5000, () => console.log("Server is listening on port 5000"));
+    app.listen(port, () => console.log(`Server is listening on port ${port}` ));
   })
   .catch((err) => {
     console.log("cannot connect to DB", err);
