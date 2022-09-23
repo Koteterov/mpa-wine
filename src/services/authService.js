@@ -9,11 +9,10 @@ const {secret, saltRounds} = require("../config/constants")
 
 
 exports.register = async ({ username, password, repeatPassword }) => {
-  const existingUser = await User.findOne({ username: username });
+  const existingUser = await User.findOne({ email: new RegExp(`^${email}$`, 'i') });
 
-  let emailPattern = /[a-zA-Z0-9]/
 
-  if (existingUser && username != "") {
+  if (existingUser) {
     throw new Error("This user already exists!")
   }
 
