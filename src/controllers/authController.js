@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const authService = require("../services/authService");
 const { body, validationResult } = require("express-validator");
+const validator = require("validator");
 
 const { isUser } = require("../middlewares/authMiddleware");
 
 
 const { sessionName } = require("../config/constants");
-const validator = require("validator");
 
 router.get("/register", isUser, (req, res) => {
   res.render("auth/register");
@@ -62,7 +62,6 @@ router.post("/login", async (req, res) => {
     res.redirect("/");
   } catch (error) {
     const userData = req.body
-    // res.locals.error = error.message
     res.status(400).render("auth/login", {userData, error: error.message });
   }
 });
