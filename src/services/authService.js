@@ -9,7 +9,7 @@ const {secret, saltRounds} = require("../config/constants")
 
 
 exports.register = async ({ username, password, repeatPassword }) => {
-  const existingUser = await User.findOne({ email: new RegExp(`^${email}$`, 'i') });
+  const existingUser = await User.findOne({ username: new RegExp(`^${username}$`, 'i') });
 
 
   if (existingUser) {
