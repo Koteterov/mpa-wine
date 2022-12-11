@@ -15,6 +15,7 @@ The application has the following parts:
 * All products can be seen with an option to search by name and define a range of market rating. 
 * Product details can be loaded with information of the already attached accessories to the chosen wines.
 ### REGISTER
+![register](https://user-images.githubusercontent.com/102145445/206910073-9b269b07-135e-47c2-9a87-448a39ad183d.jpg)
 In order to use the full functionality, users must register and login.
 Registration process is validated and sanitized by express-validator library with the following requirements:
 * Email must be at least 4 characters long
