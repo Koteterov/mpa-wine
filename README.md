@@ -31,6 +31,7 @@ Registration process is validated and sanitized by express-validator library wit
     * Username - peter@abv.bg
     * Password - 1 (… just to be easy)
 ### ADD WINE
+![create](https://user-images.githubusercontent.com/102145445/206910417-944bca66-4a79-4c4c-9fd3-356461c375e0.jpg)
 * Only logged in users have access of all functionalities of the application – add, delete, edit wines and accessories as well as attach accessories  to wines
 ### ADD ACCESSORY
 * Relation Wine - Accessory / Accessory - Wine has been made
