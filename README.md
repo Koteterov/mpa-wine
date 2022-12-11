@@ -24,13 +24,14 @@ Registration process is validated and sanitized by express-validator library wit
 * Validator is ensuring that the username input be a valid email
 * Client receives the relevant error message to take relevant actions
 ### LOGIN
+![login](https://user-images.githubusercontent.com/102145445/206910230-d9d48946-69b4-44dd-b15f-631ec0d8296c.jpg)
 * Login process is ensured by JSON Web Token and technically implemented with the BCRYPT library 
 * Client receives the relevant error message in case of invalid input
-### ADD WINE
-* Only logged in users have access of all functionalities of the application – add, delete, edit wines and accessories as well as attach accessories  to wines.
 * The app can be tested with a preliminary created user:
     * Username - peter@abv.bg
     * Password - 1 (… just to be easy)
+### ADD WINE
+* Only logged in users have access of all functionalities of the application – add, delete, edit wines and accessories as well as attach accessories  to wines
 ### ADD ACCESSORY
 * Relation Wine - Accessory / Accessory - Wine has been made
 ### DETAILS PAGE
