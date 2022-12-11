@@ -11,6 +11,7 @@ Products can be searched by name and rating.
 ## :information_source: Structure
 The application has the following parts:
 ### Home page / BROWSE
+![home](https://user-images.githubusercontent.com/102145445/206909873-5655eea1-b290-43d3-96b8-5d78d831dab1.jpg)
 * All products can be seen with an option to search by name and define a range of market rating. 
 * Product details can be loaded with information of the already attached accessories to the chosen wines.
 ### REGISTER
