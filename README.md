@@ -44,6 +44,6 @@ Registration process is validated and sanitized by express-validator library wit
 ### ABOUT
 * Some more information about the site
 ## :paperclips: Project link on Internet
-Now available at (after being patient enough to wait for the service restart – between 15 and 30 seconds): 
-* on Heroku :point_right: https://mpa-wine.herokuapp.com/
+Now available at (after being patient enough to wait for the service restart – approx 30 seconds): 
 * on Render :point_right: https://mpa-wine.onrender.com/
+* on Azure :point_right: https://mpa-wine.azurewebsites.net/
