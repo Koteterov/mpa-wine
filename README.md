@@ -36,6 +36,7 @@ Registration process is validated and sanitized by express-validator library wit
 ### ADD ACCESSORY
 * Relation Wine - Accessory / Accessory - Wine has been made
 ### DETAILS PAGE
+![edit](https://user-images.githubusercontent.com/102145445/206910768-629ce4d6-f61f-459c-8f9a-15223f0694c8.jpg)
 * Logged in users and publication owners can:
     * Edit wine
     * Delete wine
